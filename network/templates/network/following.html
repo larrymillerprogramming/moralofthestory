@@ -1,0 +1,86 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+<div class="container">
+    {% if user.is_authenticated %}
+    <br>
+        <div class="simplebox">
+            <h2>Welcome, {{ user }}!</h2>
+            <hr>
+            <form style="display:inline;" action='{% url "newpost" %}' method="POST">
+                {% csrf_token %}
+                <input type="text" style="width: 85%;" maxlength=1000 name="content" placeholder="Create a new post ...">
+                <input type="submit" style="width: 14%;" value="Share">
+            </form>
+        </div>
+        <hr>
+    {% endif %}
+
+    <h2 class="postsheading">Accounts You Follow</h2>
+    {% ifequal activePosts|length 0 %}
+        <div class="simplebox">
+            <i>No posts yet. Follow active users to see their posts!</i>
+        </div>
+    {% endifequal %}
+    {% for k in page %}
+        <div class="simplebox">
+            <a href="{% url 'profile' k.poster %}"><b>{{ k.poster }}</b></a>
+            <p style="display: block;" id="postcontent{{ k.id }}">{{ k.content }}</p>
+            <div class="row">
+                <div class="col-3">
+                    <!-- Retrieve id of Like object for this user and this post -->
+                    <div style="display: none;" aria-disabled="true" id="likeIdForPost{{ k.id }}">
+                        {% for post, likeId in likeIds.items %}
+                            {% if post == k.id %}
+                                {{ likeId }}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
+                    <!-- Like button -->
+                    {% for post, bool in isLiked.items %}
+                        <!-- If user is logged in and has liked this post -->
+                        {% if post == k and bool %}
+                            <span onclick="Like('{{ k.id }}')"><i class="bi bi-heart-fill" id="likebutton{{ k.id }}"></i></span>
+                            <span id="likecounter{{ k.id }}">
+                                {% for currentPost, likeCount in activePosts.items %}
+                                    {% if currentPost == k %}
+                                        {{ likeCount }}
+                                    {% endif %}
+                                {% endfor %}
+                            </span>
+                        <!-- If the user has not liked this post -->
+                        {% elif post == k %}
+                            <span onclick="Like('{{ k.id }}')"><i class="bi bi-heart" id="likebutton{{ k.id }}"></i></span>
+                            <span id="likecounter{{ k.id }}">
+                                {% for currentPost, likeCount in activePosts.items %}
+                                    {% if currentPost == k %}
+                                        {{ likeCount }}
+                                    {% endif %}
+                                {% endfor %}
+                            </span>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="col-9">
+                    <p class="posttime">{{ k.time }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    {% ifnotequal activePosts|length 0 %}
+        <div style="text-align: center;">
+            {% if page.has_previous %}
+            <a href="{% url 'index' %}?page={{ page.previous_page_number }}" class="btn btn-success">Previous</a>
+            {% else %}
+                <button class="btn btn-secondary" disabled>Previous</button>
+            {% endif %}
+            {% if page.has_next %}
+                <a href="{% url 'index' %}?page={{ page.next_page_number }}" class="btn btn-success">Next</a>
+            {% else %}
+                <button class="btn btn-secondary" disabled>Next</button>
+            {% endif %}
+        </div>
+    {% endifnotequal %}
+</div>
+{% endblock %}
