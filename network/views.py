@@ -28,6 +28,7 @@ def index(request):
         count = Like.objects.filter(postId=post.id, is_liked=True).count()
         activePosts[post] = count
         p = Paginator(posts, 10)
+        page = ""
         page_num = request.GET.get('page', 1)
         try:
             page = p.page(page_num)
