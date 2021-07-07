@@ -1,0 +1,110 @@
+body {
+    background-image: linear-gradient(#5cb85c, #ffffff);
+    background-attachment: fixed;
+}
+
+h2 {
+    text-align: center;
+    color: #346934;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: #5cb85c;
+    transition-duration: 0.25s;
+}
+
+a:hover {
+    color: #346934;
+    text-decoration: none;
+}
+
+a:active {
+    color: #5cb85c;
+}
+
+a:focus {
+    color: #5cb85c;
+}
+
+.form-control:focus {
+    border-color: #5cb85c;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 204, 0, 0.6);
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+.nav-link {
+    color: #346934;
+}
+
+.nav-link:hover {
+    color: #5cb85c;
+}
+
+.simplebox {
+    background-color: #ffffff;
+    border: 1px solid #346934;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.postsheading {
+    color: #ffffff;
+    text-shadow: #346934 0px 3px 3px;
+}
+
+.posttime {
+    text-align: right;
+}
+
+.editbutton {
+    color: #5cb85c;
+    padding: 0px 4px 4px 4px;
+}
+
+input {
+    padding: 4px;
+    border: 1px solid #346934;
+    border-radius: 10px;
+}
+
+textarea {
+    padding: 4px;
+    border: 1px solid #346934;
+    border-radius: 10px;
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+.bi-heart-fill {
+    color: #346934;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background-image: linear-gradient(#5cb85c, #ffffff);
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #346934;
+}
