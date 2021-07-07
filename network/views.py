@@ -66,10 +66,16 @@ def register(request):
     if request.method == "POST":
         username = request.POST["username"]
         email = request.POST["email"]
-
-        # Ensure password matches confirmation
         password = request.POST["password"]
         confirmation = request.POST["confirmation"]
+
+        # Ensure all fields are completed
+        if "" in [username, email, password, confirmation]:
+            return render(request, "network/register.html", {
+                "message": "All fields are required."
+            })
+
+        # Ensure password matches confirmation
         if password != confirmation:
             return render(request, "network/register.html", {
                 "message": "Passwords must match."
