@@ -5,7 +5,7 @@
     <h2>Login</h2>
 
     {% if message %}
-        <div>{{ message }}</div>
+        <div><p style="text-align:center">{{ message }}</p></div>
     {% endif %}
     <div class="container simplebox">
         <form action="{% url 'login' %}" method="post">
