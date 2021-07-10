@@ -64,14 +64,15 @@ a:focus {
 
 .bannerfooter {
     color: #343469;
-    background-color: #ffffffaa;
-    padding: 2%;
+    background-color: ffffffcc;
+    padding: 1%;
 }
 
 .bannerblurb {
     color: #343469;
     font-weight: bold;
-    background-color: #ffffffaa;
+    background-color: #ffffffcc;
+    border-radius: 4px;
     padding: 2%;
     margin-left: 10%;
     width: 50%;
@@ -137,13 +138,13 @@ textarea {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
 }
   
 ::-webkit-scrollbar-track {
-    background-image: linear-gradient(#5757ac, #ffffff);
+    background-color: #343469;
 }
    
 ::-webkit-scrollbar-thumb {
-    background: #343469;
+    background: #ffffff;
 }
