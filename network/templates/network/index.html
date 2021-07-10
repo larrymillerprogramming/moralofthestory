@@ -44,7 +44,7 @@
             <div id="editform{{ k.id }}" style="display: none;">
                 <div class="editform" id="editform{{ k.id }}">
                     <textarea style="width: 100%;" maxlength=1000 name="content" id="editcontent{{ k.id }}">{{ k.content }}</textarea><br>
-                    <button class="btn btn-success" id="editsubmit{{ k.id }}" onclick="SaveEdit('{{ k.id }}')">Update</button>
+                    <button class="btn btnactive" id="editsubmit{{ k.id }}" onclick="SaveEdit('{{ k.id }}')">Update</button>
                 </div>
             </div>
             {% endif %}
