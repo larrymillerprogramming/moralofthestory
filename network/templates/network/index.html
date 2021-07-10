@@ -1,10 +1,8 @@
 {% extends "network/layout.html" %}
 
 {% block body %}
-<div class="container">
     {% if user.is_authenticated %}
-        <br>
-        <div class="simplebox">
+        <div class="bannerbox">
             <h2>Welcome, {{ user }}!</h2>
             <hr>
             <form style="display: inline;" action='{% url "newpost" %}' method="POST">
@@ -15,8 +13,7 @@
         </div>
         <hr>
     {% else %}
-        <br>
-        <div class="simplebox">
+        <div class="bannerbox">
             <h2 style="text-align: left;">So, the <i>Moral Of The Story</i> is ...</h2>
             <p>
                 Learned a life lesson recently? Break it down in 500 characters or less!<br>
@@ -27,6 +24,7 @@
         </div>
     {% endif %}
 
+<div class="container">
     <h2 class="postsheading">Recent Posts</h2>
     {% ifequal activePosts|length 0 %}
         <div class="simplebox">
@@ -43,7 +41,7 @@
             {% if k.poster == user %}
             <div id="editform{{ k.id }}" style="display: none;">
                 <div class="editform" id="editform{{ k.id }}">
-                    <textarea style="width: 100%;" maxlength=1000 name="content" id="editcontent{{ k.id }}">{{ k.content }}</textarea><br>
+                    <textarea style="width: 100%;" maxlength=500 name="content" id="editcontent{{ k.id }}">{{ k.content }}</textarea><br>
                     <button class="btn btnactive" id="editsubmit{{ k.id }}" onclick="SaveEdit('{{ k.id }}')">Update</button>
                 </div>
             </div>

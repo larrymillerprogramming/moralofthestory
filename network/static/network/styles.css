@@ -51,6 +51,13 @@ a:focus {
     color: #5757ac;
 }
 
+.bannerbox {
+    background-color: #ffffff;
+    border: 1px solid #343469;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
 .simplebox {
     background-color: #ffffff;
     border: 1px solid #343469;
