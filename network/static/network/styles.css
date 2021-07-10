@@ -92,13 +92,13 @@ textarea {
 
 .btnactive {
     color: #ffffff;
-    background-color: #5757ac;
+    background-color: #343469;
 }
 
-button:disabled {
-    cursor: not-allowed;
-    pointer-events: all !important;
-  }
+.btnactive:hover {
+    background-color: #5757ac;
+    color: #ffffff;
+}
 
 .bi-heart-fill {
     color: #343469;
