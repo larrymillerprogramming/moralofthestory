@@ -3,35 +3,40 @@
 {% block body %}
     {% if user.is_authenticated %}
         <div class="bannerbox">
-            <h2>Welcome, {{ user }}!</h2>
-            <hr>
-            <form style="display: inline;" action='{% url "newpost" %}' method="POST">
-                {% csrf_token %}
-                <input type="text" style="width: 85%;" maxlength=500 name="content" placeholder="So, the MoralOfTheStory is ...">
-                <input type="submit" style="width: 14%;" value="Share">
-            </form>
+            <br>
+            <div class="bannerheader">
+                <h2>the MOTS</h2>
+            </div>
+            <br>
+            <br>
         </div>
-        <hr>
+        <form style="display: inline; padding: 1%;" action='{% url "newpost" %}' method="POST">
+            {% csrf_token %}
+            <input type="text" style="width: 84%;" maxlength=500 name="content" placeholder="So, the MoralOfTheStory is ...">
+            <input type="submit" style="width: 13%;" value="Share">
+        </form>
+        <br><br>
     {% else %}
         <div class="bannerbox">
             <br>
-            <div style="margin-left: 5%">
-                <h2 style="text-align: left;">So, the <i>Moral Of The Story</i> is ...</h2>
+            <div class="bannerheader">
+                <h2 >the MOTS</h2>
             </div>
             <br>
-            <p class="bannerblurb">
+            <div class="bannerblurb">
+                <h5>So, the <i>Moral Of The Story</i> is ...</h5>
                 Learned a life lesson recently? Break it down in 500 characters or less!<br>
                 Whether it's helpful, bitter, friendly, or cynical...<br>
                 Share your wisdom with the world!
-            </p>
+            </div>
             <br>
             <p class="bannerfooter" style="text-align: center;"><a href="{% url 'login' %}">Log In</a> | <a href="{% url 'register' %}">Register</a></p>
         </div>
-        <hr>
+        <br>
     {% endif %}
 
 <div class="container">
-    <h2 class="postsheading">Recent Posts</h2>
+    <div class="postsheading">Recent Posts</div>
     {% ifequal activePosts|length 0 %}
         <div class="simplebox">
             <i>No posts yet. Be the first!</i>

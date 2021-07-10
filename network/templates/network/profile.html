@@ -1,9 +1,25 @@
 {% extends "network/layout.html" %}
 
 {% block body %}
+<div class="bannerbox">
+    <br>
+    <div class="bannerheader">
+        <h2>the MOTS</h2>
+    </div>
+    <br>
+    <br>
+</div>
+{% if user.is_authenticated and user == profile %}
+    <form style="display: inline; padding: 1%;" action='{% url "newpost" %}' method="POST">
+        {% csrf_token %}
+        <input type="text" style="width: 84%;" maxlength=500 name="content" placeholder="So, the MoralOfTheStory is ...">
+        <input type="submit" style="width: 13%;" value="Share">
+    </form>
+    <br>
+{% endif %}
 <br>
 <div class="container">
-    <div class="simplebox">
+    <div class="profbox">
         <div class="row">
             <div class="col-6" style="text-align: center;">
                 <h3>{{ profile.username }}</h3>
@@ -31,20 +47,8 @@
             </div>
         </div>
     </div>
-    {% if user.is_authenticated and user == profile %}
-    <br>
-        <div class="simplebox">
-            <form style="display:inline;" action='{% url "newpost" %}' method="POST">
-                {% csrf_token %}
-                <input type="text" style="width: 85%;" maxlength=500 name="content" placeholder="So, the MoralOfTheStory is ...">
-                <input type="submit" style="width: 14%;" value="Share">
-            </form>
-        </div>
-    {% endif %}
-</div>
 
-<div class="container" id="body-container">
-    <hr>
+    <div class="postsheading">Posts by {{ profile.username }}</div>
     {% ifequal activePosts|length 0 %}
         <div class="simplebox">
             <i>No posts yet.</i>

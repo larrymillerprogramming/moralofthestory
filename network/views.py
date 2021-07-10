@@ -157,7 +157,7 @@ def profile(request, username):
 
 
 # Function for the /following path
-@login_required
+@login_required(login_url='login')
 def following(request):
     followings = Follow.objects.filter(follower=request.user, is_following=True)
     followedAccounts = []
