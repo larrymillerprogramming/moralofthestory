@@ -7,7 +7,7 @@ class User(AbstractUser):
 
 class Post(models.Model):
     poster = models.ForeignKey(User, on_delete=models.CASCADE, related_name="posts", null=True)
-    content = models.CharField(max_length=1000, null=True)
+    content = models.CharField(max_length=500, null=True)
     time = models.DateTimeField(auto_now_add=True, null=True)
 
     def __str__(self):

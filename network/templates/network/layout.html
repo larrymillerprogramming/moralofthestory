@@ -11,7 +11,7 @@
     <body>
 
         <nav class="navbar navbar-expand">
-            <a class="navbar-brand" href="/">Moral of the Story</a>
+            <a class="navbar-brand" href="/">the MOTS</a>
           
             <div>
               <ul class="navbar-nav mr-auto">
@@ -21,7 +21,7 @@
                     </li>
                 {% endif %}
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'index' %}">All Posts</a>
+                  <a class="nav-link" href="{% url 'index' %}">Recent</a>
                 </li>
                 {% if user.is_authenticated %}
                     <li class="nav-item">

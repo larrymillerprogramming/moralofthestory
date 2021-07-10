@@ -36,7 +36,7 @@
         <div class="simplebox">
             <form style="display:inline;" action='{% url "newpost" %}' method="POST">
                 {% csrf_token %}
-                <input type="text" style="width: 85%;" maxlength=1000 name="content" placeholder="Welcome, {{ profile.username }}! Create a new post ...">
+                <input type="text" style="width: 85%;" maxlength=500 name="content" placeholder="So, the MoralOfTheStory is ...">
                 <input type="submit" style="width: 14%;" value="Share">
             </form>
         </div>

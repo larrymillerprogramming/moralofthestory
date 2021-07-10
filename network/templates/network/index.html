@@ -9,9 +9,21 @@
             <hr>
             <form style="display: inline;" action='{% url "newpost" %}' method="POST">
                 {% csrf_token %}
-                <input type="text" style="width: 85%;" maxlength=1000 name="content" placeholder="Create a new post ...">
+                <input type="text" style="width: 85%;" maxlength=500 name="content" placeholder="So, the MoralOfTheStory is ...">
                 <input type="submit" style="width: 14%;" value="Share">
             </form>
+        </div>
+        <hr>
+    {% else %}
+        <br>
+        <div class="simplebox">
+            <h2 style="text-align: left;">So, the <i>Moral Of The Story</i> is ...</h2>
+            <p>
+                Learned a life lesson recently? Break it down in 500 characters or less!<br>
+                Whether it's helpful, bitter, petty, or cynical...<br>
+                Share your wisdom with the world!
+            </p>
+            <p style="text-align: center;"><a href="{% url 'register' %}">Log In</a> | <a href="{% url 'register' %}">Register</a></p>
         </div>
         <hr>
     {% endif %}
