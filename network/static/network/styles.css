@@ -55,6 +55,9 @@ a:focus {
     color: #ffffff;
     background-color: #9c894d;
     background-image: url('banner.jpg') !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border: 1px solid #343469;
     padding: 5% 10% 5% 5%;
     margin-bottom: 5px;
