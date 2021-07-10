@@ -1,11 +1,11 @@
 body {
-    background-image: linear-gradient(#5cb85c, #ffffff);
+    background-image: linear-gradient(#5757ac, #ffffff);
     background-attachment: fixed;
 }
 
 h2 {
     text-align: center;
-    color: #346934;
+    color: #343469;
 }
 
 p {
@@ -13,26 +13,26 @@ p {
 }
 
 a {
-    color: #5cb85c;
+    color: #5757ac;
     transition-duration: 0.25s;
 }
 
 a:hover {
-    color: #346934;
+    color: #343469;
     text-decoration: none;
 }
 
 a:active {
-    color: #5cb85c;
+    color: #5757ac;
 }
 
 a:focus {
-    color: #5cb85c;
+    color: #5757ac;
 }
 
 .form-control:focus {
-    border-color: #5cb85c;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 204, 0, 0.6);
+    border-color: #5757ac;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 204, 0.6);
 }
 
 .navbar {
@@ -43,16 +43,16 @@ a:focus {
 }
 
 .nav-link {
-    color: #346934;
+    color: #343469;
 }
 
 .nav-link:hover {
-    color: #5cb85c;
+    color: #5757ac;
 }
 
 .simplebox {
     background-color: #ffffff;
-    border: 1px solid #346934;
+    border: 1px solid #343469;
     border-radius: 10px;
     padding: 10px;
     margin-bottom: 5px;
@@ -60,7 +60,7 @@ a:focus {
 
 .postsheading {
     color: #ffffff;
-    text-shadow: #346934 0px 3px 3px;
+    text-shadow: #343469 0px 3px 3px;
 }
 
 .posttime {
@@ -68,19 +68,19 @@ a:focus {
 }
 
 .editbutton {
-    color: #5cb85c;
+    color: #5757ac;
     padding: 0px 4px 4px 4px;
 }
 
 input {
     padding: 4px;
-    border: 1px solid #346934;
+    border: 1px solid #343469;
     border-radius: 10px;
 }
 
 textarea {
     padding: 4px;
-    border: 1px solid #346934;
+    border: 1px solid #343469;
     border-radius: 10px;
 }
 
@@ -89,7 +89,7 @@ textarea {
 }
 
 .bi-heart-fill {
-    color: #346934;
+    color: #343469;
 }
 
 .footer {
@@ -102,9 +102,9 @@ textarea {
 }
   
 ::-webkit-scrollbar-track {
-    background-image: linear-gradient(#5cb85c, #ffffff);
+    background-image: linear-gradient(#5757ac, #ffffff);
 }
    
 ::-webkit-scrollbar-thumb {
-    background: #346934;
+    background: #343469;
 }
