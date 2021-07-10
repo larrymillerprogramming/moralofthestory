@@ -121,13 +121,9 @@
         <div style="text-align: center;">
             {% if page.has_previous %}
             <a href="{% url 'index' %}?page={{ page.previous_page_number }}" class="btn btnactive">Previous</a>
-            {% else %}
-                <button class="btn btn-secondary" disabled>Previous</button>
             {% endif %}
             {% if page.has_next %}
                 <a href="{% url 'index' %}?page={{ page.next_page_number }}" class="btn btnactive">Next</a>
-            {% else %}
-                <button class="btn btn-secondary" disabled>Next</button>
             {% endif %}
         </div>
     {% endifnotequal %}
