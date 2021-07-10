@@ -54,9 +54,22 @@ a:focus {
 .bannerbox {
     color: #ffffff;
     background-color: #9c894d;
+    background-image: url('banner.jpg') !important;
     border: 1px solid #343469;
-    padding: 10px 20px 10px 20px;
+    padding: 5% 10% 5% 5%;
     margin-bottom: 5px;
+}
+
+.bannerfooter {
+    color: #343469;
+    background-color: #ffffffaa;
+}
+
+.bannerblurb {
+    color: #343469;
+    background-color: #ffffffaa;
+    margin-left: 10%;
+    width: 50%;
 }
 
 .simplebox {

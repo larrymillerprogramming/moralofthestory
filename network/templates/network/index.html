@@ -14,14 +14,18 @@
         <hr>
     {% else %}
         <div class="bannerbox">
+            <br>
             <h2 style="text-align: left;">So, the <i>Moral Of The Story</i> is ...</h2>
-            <p>
+            <br>
+            <p class="bannercontent">
                 Learned a life lesson recently? Break it down in 500 characters or less!<br>
                 Whether it's helpful, bitter, friendly, or cynical...<br>
                 Share your wisdom with the world!
             </p>
-            <p style="text-align: center;"><a href="{% url 'login' %}">Log In</a> | <a href="{% url 'register' %}">Register</a></p>
+            <br>
+            <p class="bannercontent" style="text-align: center;"><a href="{% url 'login' %}">Log In</a> | <a href="{% url 'register' %}">Register</a></p>
         </div>
+        <hr>
     {% endif %}
 
 <div class="container">
