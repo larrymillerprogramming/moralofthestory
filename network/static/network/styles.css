@@ -54,23 +54,25 @@ a:focus {
 .bannerbox {
     color: #ffffff;
     background-color: #9c894d;
-    background-image: url('banner.jpg') !important;
+    background-image: url('booksbanner.jpg') !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid #343469;
-    padding: 5% 10% 5% 5%;
     margin-bottom: 5px;
 }
 
 .bannerfooter {
     color: #343469;
     background-color: #ffffffaa;
+    padding: 2%;
 }
 
 .bannerblurb {
     color: #343469;
+    font-weight: bold;
     background-color: #ffffffaa;
+    padding: 2%;
     margin-left: 10%;
     width: 50%;
 }
