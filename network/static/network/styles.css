@@ -1,6 +1,10 @@
 body {
-    background-color: #5757ac;
-    background-image: url('dark-wood.png') !important;
+    background-color: #ffffff;
+    background-image: url('dark-wood-bg.png') !important;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     word-wrap: break-word;
 }
 
@@ -144,6 +148,11 @@ textarea {
 .btnactive:hover {
     background-color: #5757ac;
     color: #ffffff;
+}
+
+.btnshare {
+    color: #343469;
+    background-color: #ffffff;
 }
 
 .bi-heart-fill {
