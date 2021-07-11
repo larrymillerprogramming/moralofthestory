@@ -10,12 +10,14 @@
             <br>
             <br>
         </div>
-        <form style="display: inline; padding: 1%;" action='{% url "newpost" %}' method="POST">
-            {% csrf_token %}
-            <input type="text" style="width: 84%;" maxlength=500 name="content" placeholder="So, the MoralOfTheStory is ...">
-            <input type="submit" class="btnshare" style="width: 13%;" value="Share">
-        </form>
-        <br><br>
+        <div class="shareform">
+            <form style="display: inline; padding: 1%;" action='{% url "newpost" %}' method="POST">
+                {% csrf_token %}
+                <input type="text" style="width: 84%;" maxlength=500 name="content" placeholder="So, the MoralOfTheStory is ...">
+                <input type="submit" class="btnshare" style="width: 13%;" value="Share">
+            </form>
+        </div>
+        <br>
     {% else %}
         <div class="bannerbox">
             <br>

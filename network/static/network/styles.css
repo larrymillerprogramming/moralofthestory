@@ -1,10 +1,7 @@
 body {
-    background-color: #ffffff;
-    background-image: url('dark-wood-bg.png') !important;
-    background-position: center;
+    background-color: #fafaff;
+    background-image: url('groovepaper.png') !important;
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
     word-wrap: break-word;
 }
 
@@ -63,7 +60,6 @@ a:focus {
     background-repeat: no-repeat;
     background-size: cover;
     border-bottom: 1px solid #14142aaa;
-    margin-bottom: 5px;
 }
 
 .bannerheader {
@@ -91,6 +87,13 @@ a:focus {
     padding: 4px;
 }
 
+.shareform {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #5757ac;
+    background-image: url('dark-wood.png') !important;
+}
+
 .simplebox {
     background-color: #ffffff;
     border-left: 4px solid #14142a;
@@ -100,18 +103,22 @@ a:focus {
 }
 
 .profbox {
-    color: #ffffff;
-    background-color: #14142aaa;
+    color: #343469;
+    background-color: #ffffff;
     border-radius: 8px;
+    border-bottom: 2px solid #14142a;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     padding: 10px;
     margin-bottom: 8px;
 }
 
 .postsheading {
+    background-color: #5757ac;
+    background-image: url('dark-wood.png') !important;
+    border-radius: 8px 8px 0px 0px;
     color: #ffffff;
+    font-weight: bold;
     letter-spacing: 2px;
-    text-shadow: #14142a 0px 3px 3px;
     padding: 4px 4px 4px 5%;
 }
 
@@ -122,6 +129,11 @@ a:focus {
 .editbutton {
     color: #5757ac;
     padding: 0px 4px 4px 4px;
+}
+
+.editbutton:focus {
+    border: none;
+    box-shadow: none;
 }
 
 input {
@@ -160,13 +172,9 @@ textarea {
 }
 
 .footer {
-    color: #ffffff;
+    color: #343469;
     text-align: center;
-    padding: 10px;
-}
-
-.footer a:hover {
-    color: #ffffff;
+    padding-bottom: 10px;
 }
 
 ::-webkit-scrollbar {
@@ -174,9 +182,9 @@ textarea {
 }
   
 ::-webkit-scrollbar-track {
-    background-color: #343469;
+    background-color: #ffffff;
 }
    
 ::-webkit-scrollbar-thumb {
-    background: #ffffff;
+    background: #343469;
 }

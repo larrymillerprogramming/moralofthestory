@@ -10,12 +10,13 @@
     <br>
 </div>
 {% if user.is_authenticated and user == profile %}
-    <form style="display: inline; padding: 1%;" action='{% url "newpost" %}' method="POST">
-        {% csrf_token %}
-        <input type="text" style="width: 84%;" maxlength=500 name="content" placeholder="So, the MoralOfTheStory is ...">
-        <input type="submit" style="width: 13%;" value="Share">
-    </form>
-    <br>
+    <div class="shareform">
+        <form class="shareform" style="display: inline; padding: 1%;" action='{% url "newpost" %}' method="POST">
+            {% csrf_token %}
+            <input type="text" style="width: 84%;" maxlength=500 name="content" placeholder="So, the MoralOfTheStory is ...">
+            <input type="submit" style="width: 13%;" value="Share">
+        </form>
+    </div>
 {% endif %}
 <br>
 <div class="container">
